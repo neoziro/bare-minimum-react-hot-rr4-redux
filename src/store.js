@@ -1,9 +1,18 @@
 import { createStore } from 'redux';
 
-const reducer = (state = 0, action) => {
+const reducer = (state = {
+	counter:0,
+	newsData:'my data'
+}, action) => {
     switch (action.type) {
         case 'INCREMENT':
-            return state + 1;
+            return Object.assign({}, state, {
+				counter:state.counter +1
+			})
+        case 'DECREMENT':
+            return Object.assign({}, state, {
+				counter:state.counter -1
+			})
     }
 
     return state;
