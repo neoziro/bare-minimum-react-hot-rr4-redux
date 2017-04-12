@@ -19,7 +19,7 @@ export default class extends Component {
     return <div>
       Page 1
       <input type="number" value={this.state.value} onChange={this.changed} />
-    </div>   
+    </div>
   }
 }
 
